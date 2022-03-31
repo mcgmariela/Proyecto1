@@ -1,0 +1,21 @@
+{% extends 'appblog/test.html' %}
+
+{% block main %}
+    <form action="/posteos_buscar" method="GET">
+        {% csrf_token %}
+        <table class="table table-striped">
+            {{search_form.as_table}}
+        </table>
+
+        <input type="submit" value="Buscar">
+    </form>
+
+        {% if error %}<p style="color:red">{{error}}</p>{% endif %}
+
+        {% if titulo2 %}
+            <p> Resultado busqueda: <span style="font-weight: bold;">{{titulo2.titulo}}</span></p>
+        {% else %}
+            <p> No se encontraron posteos con ese titulo</p>
+        {% endif %}
+
+{% endblock %}

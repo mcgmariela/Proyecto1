@@ -1,0 +1,13 @@
+{% extends 'appblog/test.html' %}
+
+{% block main %}
+   
+<form action="crear_usuario_view" method="POST">
+    {% csrf_token %}
+    <table class="table table-striped">
+        {{formulario.as_table}}
+    </table>
+    <input type="submit" value="Registrar usuario">
+</form>
+
+{% endblock %}

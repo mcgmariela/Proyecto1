@@ -1,0 +1,14 @@
+{% extends 'appblog/test.html' %}
+
+{% block main %}
+   
+    {% for post in posteos %}
+    <li> 
+        <p style="font-style: italic;"> Titulo: {{post.titulo}} </p>
+        <p style="font-style: italic;"> Autor: {{post.autor}} </p>
+        <p>{{post.contenido}}</p>
+    </li>
+        
+    {% endfor %}
+
+{% endblock %}

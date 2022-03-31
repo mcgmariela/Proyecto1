@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+        {%load static%}
+
+        <title>CODERHOUSE Pyhton</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href= "{% static 'appblog/assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{% static 'appblog/assets/css/noscript.css'%}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="{% static 'appblog/index.html'%}" class="logo"><strong>Camada 26360</strong> <span> Mariela Mc Grath</span></a>
+						<nav>
+							<a href="{% static 'appblog/#menu'%}">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="{% static 'appblog/index.html'%}">Home</a></li>
+							<li><a href="{% static 'appblog/landing.html'%}">Landing</a></li>
+							<li><a href="{% static 'appblog/generic.html'%}">Generic</a></li>
+							<li><a href="{% static 'appblog/elements.html'%}">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="{% static 'appblog/#'%}" class="button primary fit">Get Started</a></li>
+							<li><a href="{% static 'appblog/#'%}" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Titulo interesante del blog</h1>
+							</header>
+							<div class="content">
+								<p>Frase motivadora que capte la atencion del usuario.</p>
+								<ul class="actions">
+									<li><a href="buscar_posteos.html" class="button next scrolly">Buscar posteos</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+                
+                {% block main %}
+
+                {% endblock %}
+
+				
+				<!-- Contact Aqui va lo que borre-->
+					
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="{% static 'appblog/#'%}">information@camada26360.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Calle Falsa #5432<br />
+										Algun Lugar, TN 00000<br />
+										Planeta Tierra</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://twitter.com/?lang=es" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/?hl=es" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://ar.linkedin.com/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="{% static 'appblog/https://html5up.net'%}">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'appblog/assets/js/jquery.min.js'%}"></script>
+			<script src="{% static 'appblog/assets/js/jquery.scrolly.min.js'%}"></script>
+			<script src="{% static 'appblog/assets/js/jquery.scrollex.min.js'%}"></script>
+			<script src="{% static 'appblog/assets/js/browser.min.js'%}"></script>
+			<script src="{% static 'appblog/assets/js/breakpoints.min.js'%}"></script>
+			<script src="{% static 'appblog/assets/js/util.js'%}"></script>
+			<script src="{% static 'appblog/assets/js/main.js'%}"></script>
+
+	</body>
+</html>
