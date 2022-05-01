@@ -1,0 +1,17 @@
+{% extends 'appblog/test.html' %}
+    
+{% block main %}
+<br>
+<br>
+<br>
+<div class="container-sm mt-3">
+    <h1 class="text-center mt-4">Leer Post {{post.titulo}}</h1>
+    
+    <p class="text-center">Post: {{posts.contenido}}</p>
+    
+    <p class="text-center" >
+        <a href="{% url 'vista_posteos' %}">Regresar</a>
+    </p>
+</div>
+
+{% endblock main %}

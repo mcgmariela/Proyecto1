@@ -1,13 +1,29 @@
 {% extends 'appblog/test.html' %}
 
 {% block main %}
-   
-<form action="crear_posteos" method="POST">
-    {% csrf_token %}
-    <table class="table table-striped">
-        {{formulario.as_table}}
-    </table>
-    <input type="submit" value="Post">
-</form>
+<br>
+<br>
+<br>
+<br>
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <form action="crear_posteos" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <table class="table table-striped">
+                                    {{formulario.media}}
+                                    {{formulario.as_table}}
+                                    
+                                </table>
+                                <input type="submit" value="Post">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 {% endblock %}

@@ -1,7 +1,11 @@
+from distutils.command.upload import upload
 from email.policy import default
 from pyexpat import model
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
+
+
 
 class Categorias(models.Model):
 
@@ -14,12 +18,13 @@ class Posteos(models.Model):
 
     #categoria = models.ForeignKey(Categorias, on_delete=models.PROTECT, default=1)
     titulo = models.CharField(max_length=150)
+    #imagen_post = models.ImageField(null=True, blank=True, upload_to="images/")
     contenido = models.TextField(max_length=2500)
     autor = models.TextField(max_length=15)
     fecha_publicacion = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return (f"titulo: {self.titulo}, autor: {self.autor}, fecha_publicacion: {self.fecha_publicacion}")
+        return (f"titulo: {self.titulo}, contenido:{self.contenido}, autor: {self.autor}, fecha_publicacion: {self.fecha_publicacion}")
 
 class Comentarios(models.Model):
 
@@ -32,9 +37,19 @@ class Comentarios(models.Model):
 
 
 class Usuarios(models.Model):
-
+    
     nombre = models.CharField(max_length=15)
     contrasena = models.CharField(max_length=8)
 
     def __str__(self):
         return (f"nombre: {self.nombre}, contrasena: {self.contrasena}")
+
+
+class Avatar_model(models.Model):
+
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    imagen = models.ImageField(upload_to="media/avatares", null= True, blank=True)
+
+    def __str__(self):
+        return str(self.imagen)
+

@@ -1,14 +1,30 @@
 {% extends 'appblog/test.html' %}
-
 {% block main %}
-   
-    {% for post in posteos %}
-    <li> 
-        <p style="font-style: italic;"> Titulo: {{post.titulo}} </p>
-        <p style="font-style: italic;"> Autor: {{post.autor}} </p>
-        <p>{{post.contenido}}</p>
-    </li>
+<br>
+<br>
+<br>
+    {% for post in object_list %}
+    {%load static%}
+        <section id="scroll">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'appblog/assets/img/01.jpg' %}" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <div class="card-body">
+                                <h5 class="card-title">{{post.titulo}}</h5>
+                                <a class="card-link" href="{%url 'detalle_post' post.titulo%}">Detalle</a> |
+                            <a class="nav-item"><a class="nav-link" href="{% url 'Comentarios'%}">Comentar post</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
     {% endfor %}
 
 {% endblock %}
+
+
