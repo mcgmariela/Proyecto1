@@ -61,17 +61,17 @@ class Post_detalle_view(DetailView):
     model = Posteos
     template_name = "appblog/detalle_post.html"
 
-class CursoActualizar(UpdateView):
+#class CursoActualizar(UpdateView):
 
-    model = Posteos
-    success_url = "/appcoder/curso/list"
-    fields = ['nombre']
+ #   model = Posteos
+  #  success_url = "/appcoder/curso/list"
+   # fields = ['nombre']
 
 
-class CursoBorrar(DeleteView):
+#class CursoBorrar(DeleteView):
 
-    model = Posteos
-    success_url = "/appcoder/curso/list"
+ #   model = Posteos
+  #  success_url = "/appcoder/curso/list"
 
 
 

@@ -17,7 +17,7 @@ urlpatterns = [
     path('editar_perfil', editar_usuario, name ="Editar_perfil"),
     path('subir_avatar', subir_avatar_view , name="subir_avatar"),
 
-    path('post', Posteos_lista_view.as_view(), name= "vista_posteos"),
+    path('posteos/list', Posteos_lista_view.as_view(), name= "vista_posteos"),
     path('detalle/post<pk>/', Post_detalle_view.as_view() , name= "detalle_post"),
     path('crear_comentarios_view', crear_comentarios_view, name="Comentarios"),
     path('posteos_buscar', buscar_posteos, name="Buscar_entradas"),
